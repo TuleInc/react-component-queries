@@ -17,7 +17,7 @@ module.exports = {
   ],
   input: 'src/index.js',
   output: {
-    file: `lib/${packageJson.name}.js`,
+    file: `dist/${packageJson.name}.js`,
     format: 'cjs',
     sourcemap: true,
     name: changeCase
