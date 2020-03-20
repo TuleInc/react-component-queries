@@ -120,12 +120,12 @@ function componentQueries(...params) {
         queryResult: {},
       }
 
-      componentWillMount() {
+      UNSAFE_componentWillMount() {
         const { size, ...otherProps } = this.props
         this.runQueries(size, otherProps)
       }
 
-      componentWillReceiveProps(nextProps) {
+      UNSAFE_componentWillReceiveProps(nextProps) {
         const { size } = this.props
         const { size: nextSize, ...nextOtherProps } = nextProps
 

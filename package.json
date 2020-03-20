@@ -1,23 +1,27 @@
 {
   "name": "react-component-queries",
-  "description":
-    "Provide props to your Components based on their Width and/or Height.",
+  "description": "Provide props to your Components based on their Width and/or Height.",
   "version": "2.3.0",
   "license": "MIT",
   "main": "dist/react-component-queries.js",
-  "files": ["*.js", "*.md", "dist"],
+  "files": [
+    "*.js",
+    "*.md",
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/ctrlplusb/react-component-queries.git"
   },
   "homepage": "https://github.com/ctrlplusb/react-component-queries#readme",
   "author": "Sean Matheson <sean@ctrlplusb.com>",
-  "keywords": ["library"],
+  "keywords": [
+    "library"
+  ],
   "scripts": {
     "build": "node ./tools/scripts/build.js",
     "clean": "rimraf ./dist && rimraf ./coverage",
-    "example:web":
-      "echo 'Make sure to `cd example/web && yarn install`' && cd example/web && yarn run start",
+    "example:web": "echo 'Make sure to `cd example/web && yarn install`' && cd example/web && yarn run start",
     "lint": "eslint src",
     "precommit": "lint-staged && npm run test",
     "prepublish": "npm run build",
@@ -78,9 +82,16 @@
     "rollup-plugin-uglify": "^3.0.0"
   },
   "jest": {
-    "collectCoverageFrom": ["src/**/*.{js,jsx}"],
-    "snapshotSerializers": ["<rootDir>/node_modules/enzyme-to-json/serializer"],
-    "testPathIgnorePatterns": ["<rootDir>/(coverage|dist|node_modules|tools)/"]
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}"
+    ],
+    "snapshotSerializers": [
+      "<rootDir>/node_modules/enzyme-to-json/serializer"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/(coverage|dist|node_modules|tools)/"
+    ],
+    "testURL": "http://localhost/"
   },
   "eslintConfig": {
     "root": true,
@@ -91,7 +102,10 @@
       "node": true,
       "jest": true
     },
-    "extends": ["airbnb", "prettier"],
+    "extends": [
+      "airbnb",
+      "prettier"
+    ],
     "rules": {
       "camelcase": 0,
       "import/prefer-default-export": 0,
@@ -100,19 +114,29 @@
       "no-underscore-dangle": 0,
       "react/no-array-index-key": 0,
       "react/react-in-jsx-scope": 0,
-      "semi": [2, "never"],
+      "semi": [
+        2,
+        "never"
+      ],
       "react/forbid-prop-types": 0,
       "react/jsx-filename-extension": 0,
       "react/sort-comp": 0
     }
   },
-  "eslintIgnore": ["node_modules/", "dist/", "coverage/"],
+  "eslintIgnore": [
+    "node_modules/",
+    "dist/",
+    "coverage/"
+  ],
   "prettier": {
     "semi": false,
     "singleQuote": true,
     "trailingComma": "all"
   },
   "lint-staged": {
-    "*.js": ["prettier --write \"src/**/*.js\"", "git add"]
+    "*.js": [
+      "prettier --write \"src/**/*.js\"",
+      "git add"
+    ]
   }
 }
